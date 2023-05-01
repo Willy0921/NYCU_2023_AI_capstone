@@ -5,7 +5,7 @@ import math
 
 # Define the board size and number of mines for each difficulty level
 class MinesweeperGame:
-    def __init__(self, level, mine_num):
+    def __init__(self, level):
         """
         Initializes a Minesweeper game with the specified level of difficulty.
 

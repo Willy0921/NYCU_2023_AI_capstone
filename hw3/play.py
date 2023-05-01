@@ -104,7 +104,6 @@ def process_new_literal(new_literals, game, KB):
                 game.update_hint(cell)
 
             KB.add_literal(new_literal)
-
     new_literals += KB.remove_single_length_clause()
     new_literals += query_safe_cells(game, KB)
 
@@ -127,7 +126,8 @@ def play(KB, game):
         process_new_literal(new_literals, game, KB)
         while len(new_literals) > 0:
             process_new_literal(new_literals, game, KB)
-
+            game.display()
+    
         KB.check_subset_clauses()
         new_literals += KB.matching_clauses_pair()
         KB.check_subset_clauses()

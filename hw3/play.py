@@ -127,7 +127,7 @@ def play(KB, game):
         while len(new_literals) > 0:
             process_new_literal(new_literals, game, KB)
             game.display()
-    
+
         KB.check_subset_clauses()
         new_literals += KB.matching_clauses_pair()
         KB.check_subset_clauses()
